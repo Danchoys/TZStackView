@@ -84,7 +84,7 @@ public class TZStackView: UIView {
         ; // Ensure closure is separated properly
       
         // Closure to invoke didSet()
-        { self.arrangedSubviews = aDecoder.decodeObjectForKey("UIStackViewArrangedSubviews") as! [UIView] }()
+        { self.arrangedSubviews = aDecoder.decodeObjectForKey("UIStackViewArrangedSubviews") as? [UIView] ?? [] }()
     }
   
     deinit {
